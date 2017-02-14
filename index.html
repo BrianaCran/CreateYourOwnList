@@ -1,0 +1,39 @@
+<h1>Create your list:</h1>
+<aside>
+  <form>
+  <label for="colorOne">
+    <p><input type="radio" name="options" id="uiBlue"/>
+      Blue Interface
+    </p>
+  </label>
+  <label for="colorTwo">
+    <p><input type="radio" name="options" id="uiBlack"/>
+      Black Interface
+    </p>
+  </label>
+    <label for="colorThree">
+    <p><input type="radio" name="options" id="uiDefault"/>
+      Default Interface
+    </p>
+  </label>
+  </form>
+</aside>
+<div class="container">
+  <input type=text id="newItem" />
+  <button id="submit">Add</button>
+  <span class="error"></span>
+  <div class="help"><span>?</span></div>
+  <div class="helpShow"><p>Just type in anything and hit add. Click twice on a item to set as finished. Click "X" to take item off the list. Use the clear list button to remove everything at once. Click on the "?" again to close this prompt.</p></div>
+  <ul id="list">
+
+  </ul>
+  <button id="sort">Sort</button>
+  <button id="clear">Clear List</button>
+</div>
+
+<script id="handlebars-demo" type="text/x-handlebars-template">
+   	<li>    
+    	<p> {{listItem}} </p>  
+      <span class="close">X</span>
+   	</li>
+</script>

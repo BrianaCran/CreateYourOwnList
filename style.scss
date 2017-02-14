@@ -1,0 +1,155 @@
+//default ui
+$border: 2px solid gray;
+body{
+     width: 100%;
+     margin: 0 20%;
+    }
+h1{
+   padding-left: 15%;
+  }
+aside{
+      width: 13%;
+      float: left;
+      margin-right: 10px;
+      padding: 5px 0px 5px 10px;
+      border: 2px solid black;
+      border-radius: 10px;
+      input{
+            margin-right: 5px;
+           }
+      
+}
+button{
+       border-radius: 50px;
+       border: none;
+       padding: 5px 10px;
+       width: 20%;
+       margin-left: 10px;
+       box-shadow: 2px 2px 4px black;
+       background: white;
+       outline: none;
+}
+#clear{
+       float: right;
+       margin-right: 10px;
+}
+.container{
+           display: inline-block;
+           width: 40%;
+           border: $border;
+           border-radius: 10px;
+           padding: 10px 10px;
+           background: gray;
+           input{
+                 width: 50%;
+                }
+           .help{
+                 float: right;
+                 margin-right: 10px;
+                 background: white;
+                 border-radius: 100%;
+                 width: 22px;
+                 padding: 3px;
+                 span{
+                      margin-left: 5px;
+                      font-size: 20px;
+                      font-weight: bold;
+                     }
+                }
+          .helpShow{
+                    display: none;
+                    color: white;
+                    }
+}
+
+#list{
+      list-style-type: none;
+      height: 300px;
+      overflow: auto;
+      padding: 20px;
+      border: 2px solid black;
+      clear:both;
+      li{
+         width: 100%;
+         padding: 1px;
+         background: white;
+         box-shadow: 3px 5px 3px black;
+         margin-bottom: 10px;
+         p{
+           font-size: 20px;
+           margin-left: 10px;
+           display: inline-block;
+           width: 85%;
+          }
+         .close{
+                color: red;
+                display: inline-block;
+                width: 20px;
+               }
+         }
+}
+.completed{
+           opacity: .8;
+           p::before{
+                     content: '✓';
+                     color: green;
+                    }     
+    
+}
+//blue ui
+.uiBlue{
+        button{
+               background: #b3ecff;
+              }
+        .container{
+                   background: #00a3cc;
+                   border: 2px solid black;
+                  }
+}
+//black ui
+.uiBlack{
+         button{
+                background: #008000;
+                box-shadow: 2px 2px 4px  white;
+                color: white;
+               }
+         .container{
+                    background: black;
+                    border: 2px solid #008000;
+                   }
+         #list{
+               border: 2px solid #008000;
+               li{
+                  p::before{
+                            color: #00cc00;
+                           }      
+                 }
+               }
+}
+
+@media(max-width: 450px){
+  body{
+       margin: 0 0 0 10px;
+  }
+  aside,.container{
+                   display: block;
+                   width: 90%;
+                   clear: both;
+  }
+  aside{
+        margin-bottom: 20px;
+  }
+  
+}
+@media(min-width: 451px)and( max-width: 769px){
+  body{
+       margin: 0 0 0 4%;
+  }
+  aside,.container{
+                   width: 90%;
+  }
+  aside{
+        margin-bottom: 20px;
+  }
+}
+
